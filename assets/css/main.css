@@ -184,7 +184,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2rem 0;
+		margin: 0 0 1rem 0;
 	}
 
 		p.major {
@@ -8602,3 +8602,18 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+.socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 75px;
+	width: 400px;
+	border: 3px solid rgba(132, 130, 204, 0.6);;
+	z-index: 99999;
+  background:rgba(132, 130, 204, 0.3);
+}
