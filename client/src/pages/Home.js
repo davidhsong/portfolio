@@ -19,14 +19,14 @@ const Home = () => {
       demo: 'https://www.zaikuofficial.com/'
     },
     {
-      id: 'sales-forecast',
-      title: 'Sales Forecast',
-      description: 'Time-series analysis project using Python to predict monthly sales trends with a Linear Regression model.',
-      image: '/images/sales-forecast.jpg',
-      technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn'],
-      github: 'https://github.com/hanbit0218/sales_forecast.git',
-      demo: null
-    },
+      id: 'promptwave',
+      title: 'PromptWave',
+      description: 'A modern AI chatbot leveraging free Hugging Face models with a responsive React frontend and Express backend.',
+      image: '/images/promptwave.jpg',
+      technologies: ['React', 'Express.js', 'Node.js', 'Hugging Face API', 'styled-components', 'Vercel'],
+      github: 'https://github.com/hanbit0218/promptwave',
+      demo: 'https://promptwave.vercel.app/'
+    }, 
     {
       id: 'hydro-sense',
       title: 'Hydro Sense',
