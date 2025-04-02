@@ -68,7 +68,7 @@ const Projects = () => {
       technologies: ['React', 'Express.js', 'Node.js', 'Hugging Face API', 'styled-components', 'React Router', 'Vercel'],
       categories: ['AI', 'Web Development', 'Full-Stack'],
       github: 'https://github.com/hanbit0218/promptwave.git',
-      demo: 'https://promptwave.vercel.app/',
+      demo: 'https://promptwave-frontend.vercel.app/',
       date: 'Mar 2025 - Apr 2025',
       featured: true
     },
