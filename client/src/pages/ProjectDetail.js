@@ -64,17 +64,17 @@ const ProjectDetail = () => {
       featured: false
     },
     {
-      id: 'chatbot-assistant',
-      title: 'AI Chatbot Assistant',
-      description: 'Simple AI-powered chatbot built using AWS Bedrock templates with basic conversation capabilities.',
-      longDescription: 'This project explores the implementation of a basic AI chatbot using AWS Bedrock templates. The chatbot can engage in simple conversations, answer questions about predefined topics, and provide helpful information to users. The deployment on AWS EC2 provided valuable experience with cloud infrastructure and the practical challenges of hosting AI applications.',
-      image: '/images/chatbot-assistant.jpg',
-      technologies: ['AWS Bedrock', 'AWS EC2', 'JavaScript', 'HTML/CSS'],
-      categories: ['AI', 'Cloud Computing', 'Web Development'],
-      github: 'https://github.com/hanbit0218/chatbot-assistant.git',
-      demo: null,
-      date: 'Aug 2024',
-      featured: false
+      id: 'promptwave',
+      title: 'PromptWave',
+      description: 'A modern AI chatbot leveraging free Hugging Face models with a responsive React frontend and Express backend.',
+      longDescription: 'PromptWave is a fully-functional AI chatbot that utilizes Hugging Face\'s free Inference API to provide intelligent conversation capabilities without any cost. The application features a sleek, responsive interface built with React and styled-components, allowing users to interact with powerful AI models like Google\'s Gemma, Zephyr, and Mistral. The Express.js backend efficiently handles API communication with Hugging Face\'s servers, while maintaining conversation context and providing a seamless user experience across devices. This project demonstrates implementing AI capabilities in web applications while optimizing for both performance and user experience.',
+      image: '/images/promptwave.jpg',
+      technologies: ['React', 'Express.js', 'Node.js', 'Hugging Face API', 'styled-components', 'React Router', 'Vercel'],
+      categories: ['AI', 'Web Development', 'Full-Stack'],
+      github: 'https://github.com/hanbit0218/promptwave.git',
+      demo: 'https://promptwave.vercel.app/',
+      date: 'Mar 2025 - Apr 2025',
+      featured: true
     },
     {
       id: 'analytics-dashboard',
