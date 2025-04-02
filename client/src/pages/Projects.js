@@ -31,7 +31,7 @@ const Projects = () => {
       github: 'https://github.com/hanbit0218/sales_forecast.git',
       demo: null,
       date: 'Feb 2024 - Mar 2024',
-      featured: false
+      featured: true
     },
     {
       id: 'hydro-sense',
@@ -47,6 +47,19 @@ const Projects = () => {
       featured: true
     },
     {
+      id: 'inventory-tracker',
+      title: 'Inventory Tracker',
+      description: 'A collaborative project creating a basic inventory management tool with real-time data synchronization.',
+      longDescription: 'Developed during my time as a Software Engineer Fellow at Headstarter AI, this inventory tracking tool was built to demonstrate real-time data synchronization using Firebase. The application allows users to add, edit, and remove inventory items, with changes reflecting immediately across all connected clients. The frontend was built with React, employing reusable components and a clean, intuitive user interface.',
+      image: '/images/inventory-tracker.jpg',
+      technologies: ['JavaScript', 'React', 'Firebase', 'Git', 'GitHub'],
+      categories: ['Frontend', 'Web Development', 'Collaborative'],
+      github: 'https://github.com/hanbit0218/inventory-tracker.git',
+      demo: null,
+      date: 'Jul 2024 - Aug 2024',
+      featured: false
+    },
+    {
       id: 'promptwave',
       title: 'PromptWave',
       description: 'A modern AI chatbot leveraging free Hugging Face models with a responsive React frontend and Express backend.',
@@ -58,19 +71,6 @@ const Projects = () => {
       demo: 'https://promptwave.vercel.app/',
       date: 'Mar 2025 - Apr 2025',
       featured: true
-    },
-    {
-      id: 'chatbot-assistant',
-      title: 'AI Chatbot Assistant',
-      description: 'Simple AI-powered chatbot built using AWS Bedrock templates with basic conversation capabilities.',
-      longDescription: 'This project explores the implementation of a basic AI chatbot using AWS Bedrock templates. The chatbot can engage in simple conversations, answer questions about predefined topics, and provide helpful information to users. The deployment on AWS EC2 provided valuable experience with cloud infrastructure and the practical challenges of hosting AI applications.',
-      image: '/images/chatbot-assistant.jpg',
-      technologies: ['AWS Bedrock', 'AWS EC2', 'JavaScript', 'HTML/CSS'],
-      categories: ['AI', 'Cloud Computing', 'Web Development'],
-      github: 'https://github.com/hanbit0218/chatbot-assistant.git',
-      demo: null,
-      date: 'Aug 2024',
-      featured: false
     },
     {
       id: 'analytics-dashboard',
