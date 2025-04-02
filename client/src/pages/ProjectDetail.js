@@ -35,7 +35,7 @@ const ProjectDetail = () => {
       github: 'https://github.com/hanbit0218/sales_forecast.git',
       demo: null,
       date: 'Feb 2024 - Mar 2024',
-      featured: true
+      featured: false
     },
     {
       id: 'hydro-sense',

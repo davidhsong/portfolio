@@ -31,7 +31,7 @@ const Projects = () => {
       github: 'https://github.com/hanbit0218/sales_forecast.git',
       demo: null,
       date: 'Feb 2024 - Mar 2024',
-      featured: true
+      featured: false
     },
     {
       id: 'hydro-sense',
@@ -47,17 +47,17 @@ const Projects = () => {
       featured: true
     },
     {
-      id: 'inventory-tracker',
-      title: 'Inventory Tracker',
-      description: 'A collaborative project creating a basic inventory management tool with real-time data synchronization.',
-      longDescription: 'Developed during my time as a Software Engineer Fellow at Headstarter AI, this inventory tracking tool was built to demonstrate real-time data synchronization using Firebase. The application allows users to add, edit, and remove inventory items, with changes reflecting immediately across all connected clients. The frontend was built with React, employing reusable components and a clean, intuitive user interface.',
-      image: '/images/inventory-tracker.jpg',
-      technologies: ['JavaScript', 'React', 'Firebase', 'Git', 'GitHub'],
-      categories: ['Frontend', 'Web Development', 'Collaborative'],
-      github: 'https://github.com/hanbit0218/inventory-tracker.git',
-      demo: null,
-      date: 'Jul 2024 - Aug 2024',
-      featured: false
+      id: 'promptwave',
+      title: 'PromptWave',
+      description: 'A modern AI chatbot leveraging free Hugging Face models with a responsive React frontend and Express backend.',
+      longDescription: 'PromptWave is a fully-functional AI chatbot that utilizes Hugging Face\'s free Inference API to provide intelligent conversation capabilities without any cost. The application features a sleek, responsive interface built with React and styled-components, allowing users to interact with powerful AI models like Google\'s Gemma, Zephyr, and Mistral. The Express.js backend efficiently handles API communication with Hugging Face\'s servers, while maintaining conversation context and providing a seamless user experience across devices. This project demonstrates implementing AI capabilities in web applications while optimizing for both performance and user experience.',
+      image: '/images/promptwave.jpg',
+      technologies: ['React', 'Express.js', 'Node.js', 'Hugging Face API', 'styled-components', 'React Router', 'Vercel'],
+      categories: ['AI', 'Web Development', 'Full-Stack'],
+      github: 'https://github.com/hanbit0218/promptwave.git',
+      demo: 'https://promptwave.vercel.app/',
+      date: 'Mar 2025 - Apr 2025',
+      featured: true
     },
     {
       id: 'chatbot-assistant',
