@@ -13,7 +13,7 @@ const Home = () => {
       id: 'zaiku',
       title: 'Zaiku',
       description: 'A full-stack e-commerce platform for Asian-inspired fashion with user authentication, shopping cart, and secure checkout.',
-      image: '/images/zaiku.jpg',
+      image: '/images/zaiku.png',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
       github: 'https://github.com/hanbit0218/zaiku.git',
       demo: 'https://www.zaikuofficial.com/'
@@ -22,10 +22,10 @@ const Home = () => {
       id: 'promptwave',
       title: 'PromptWave',
       description: 'A modern AI chatbot leveraging free Hugging Face models with a responsive React frontend and Express backend.',
-      image: '/images/promptwave.jpg',
+      image: '/images/promptwave.png',
       technologies: ['React', 'Express.js', 'Node.js', 'Hugging Face API', 'styled-components', 'Vercel'],
       github: 'https://github.com/hanbit0218/promptwave',
-      demo: 'https://promptwave.vercel.app/'
+      demo: 'https://promptwave-frontend.vercel.app/'
     }, 
     {
       id: 'hydro-sense',
@@ -90,9 +90,13 @@ const Home = () => {
           {featuredProjects.map((project, index) => (
             <div key={project.id} className="project-card">
               <div className="project-image">
-                <div className="project-placeholder">
-                  <span>{project.title.charAt(0)}</span>
-                </div>
+                {project.image ? (
+                  <img src={project.image} alt={project.title} />
+                ) : (
+                  <div className="project-placeholder">
+                    <span>{project.title.charAt(0)}</span>
+                  </div>
+                )}
               </div>
               <div className="project-content">
                 <h3>{project.title}</h3>
