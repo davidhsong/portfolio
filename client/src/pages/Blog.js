@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { blogPosts } from '../data/blogPosts';
-import { LazyImage } from '../components/LazyImage';
+import LazyImage from '../components/LazyImage';
 import '../styles/Blog.css';
 
 const Blog = () => {
@@ -60,7 +60,6 @@ const Blog = () => {
                         placeholder={<div className="blog-image-placeholder">{post.title.charAt(0)}</div>}
                       />
                     ) : (
-                      // src/pages/Blog.js (continued from previous code)
                       <div className="blog-image-placeholder">
                         <span>{post.title.charAt(0)}</span>
                       </div>

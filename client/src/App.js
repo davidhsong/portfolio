@@ -2,6 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext'; // Add this
 
 // Components
 import Navbar from './components/Navbar';
@@ -16,17 +17,19 @@ import './styles/App.css';
 function App() {
   return (
     <ThemeProvider>
-      <Router>
-        <div className="app">
-          <CursorTrail />
-          <Navbar />
-          <main className="main-content">
-            <AppRoutes />
-          </main>
-          <Footer />
-          <Accessibility />
-        </div>
-      </Router>
+      <LanguageProvider> {/* Add this */}
+        <Router>
+          <div className="app">
+            <CursorTrail />
+            <Navbar />
+            <main className="main-content">
+              <AppRoutes />
+            </main>
+            <Footer />
+            <Accessibility />
+          </div>
+        </Router>
+      </LanguageProvider> {/* Add this */}
     </ThemeProvider>
   );
 }

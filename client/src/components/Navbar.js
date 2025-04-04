@@ -1,37 +1,17 @@
-// src/components/Navbar.js
+// src/components/Navbar.js (partial update)
 import React, { useState, useContext, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
+import { LanguageContext } from '../context/LanguageContext'; // Add this
+import LanguageSwitcher from './LanguageSwitcher'; // Add this
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   const location = useLocation();
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const { t } = useContext(LanguageContext); // Add this
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Close mobile menu when changing routes
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [location.pathname]);
-
-  // Toggle mobile menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -47,10 +27,12 @@ const Navbar = () => {
         </Link>
 
         <div className="navbar-buttons">
+          <LanguageSwitcher /> {/* Add this */}
+          
           <button
             className="theme-toggle"
             onClick={toggleTheme}
-            aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+            aria-label={`${t('accessibility.switchTo')} ${theme === 'light' ? t('accessibility.darkMode') : t('accessibility.lightMode')}`}
           >
             {theme === 'light' ? (
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -74,7 +56,7 @@ const Navbar = () => {
           <button
             className={`mobile-menu-button ${menuOpen ? 'active' : ''}`}
             onClick={toggleMenu}
-            aria-label="Toggle navigation menu"
+            aria-label={menuOpen ? t('accessibility.closeMenu') : t('accessibility.openMenu')}
             aria-expanded={menuOpen}
           >
             <span></span>
@@ -90,7 +72,7 @@ const Navbar = () => {
                 to="/"
                 className={location.pathname === '/' ? 'active' : ''}
               >
-                Home
+                {t('navbar.home')}
               </Link>
             </li>
             <li>
@@ -98,7 +80,7 @@ const Navbar = () => {
                 to="/about"
                 className={location.pathname === '/about' ? 'active' : ''}
               >
-                About
+                {t('navbar.about')}
               </Link>
             </li>
             <li>
@@ -106,7 +88,7 @@ const Navbar = () => {
                 to="/projects"
                 className={location.pathname === '/projects' || location.pathname.startsWith('/projects/') ? 'active' : ''}
               >
-                Projects
+                {t('navbar.projects')}
               </Link>
             </li>
             <li>
@@ -114,7 +96,7 @@ const Navbar = () => {
                 to="/resume"
                 className={location.pathname === '/resume' ? 'active' : ''}
               >
-                Resume
+                {t('navbar.resume')}
               </Link>
             </li>
             <li>
@@ -122,7 +104,7 @@ const Navbar = () => {
                 to="/blog"
                 className={location.pathname === '/blog' || location.pathname.startsWith('/blog/') ? 'active' : ''}
               >
-                Blog
+                {t('navbar.blog')}
               </Link>
             </li>
             <li>
@@ -130,7 +112,7 @@ const Navbar = () => {
                 to="/contact"
                 className={location.pathname === '/contact' ? 'active' : ''}
               >
-                Contact
+                {t('navbar.contact')}
               </Link>
             </li>
           </ul>

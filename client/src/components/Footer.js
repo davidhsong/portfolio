@@ -1,9 +1,10 @@
 // src/components/Footer.js
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { LanguageContext } from '../context/LanguageContext';
 import '../styles/Footer.css';
 
 const Footer = () => {
+  const { t } = useContext(LanguageContext);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
             <span className="logo-text">David Song</span>
             <span className="logo-dot"></span>
           </div>
-          <p className="footer-tagline">Software Engineer & Full-Stack Developer</p>
+          <p className="footer-tagline">{t('footer.tagline')}</p>
           <div className="footer-social">
             <a 
               href="https://linkedin.com/in/davidthesong" 
@@ -52,7 +53,7 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="copyright">
-            <p>&copy; {currentYear} David Song. All rights reserved.</p>
+            <p>&copy; {currentYear} David Song. {t('footer.copyright')}</p>
           </div>
         </div>
       </div>

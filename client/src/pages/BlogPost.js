@@ -119,12 +119,11 @@ const BlogPost = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <ReactMarkdown 
-            components={renderers}
-            className="markdown-content"
-          >
-            {post.content}
-          </ReactMarkdown>
+          <div className="markdown-content">
+            <ReactMarkdown components={renderers}>
+              {post.content}
+            </ReactMarkdown>
+          </div>
         </motion.div>
 
         <motion.div

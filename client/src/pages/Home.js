@@ -2,10 +2,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
+import { LanguageContext } from '../context/LanguageContext';
 import '../styles/Home.css';
 
 const Home = () => {
-  const { theme } = useContext(ThemeContext);
+  const { } = useContext(ThemeContext);
+  const { t } = useContext(LanguageContext);
 
   // Featured projects from resume
   const featuredProjects = [
@@ -51,13 +53,13 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>Hi, I'm <span className="highlight">David Song</span></h1>
-            <h2>Software Engineer & Full-Stack Developer</h2>
-            <p>I build modern, responsive web applications with a focus on clean code and great user experience. Currently studying Computer Science at San José State University.</p>
+            <h1>{t('home.hero.greeting')} <span className="highlight">David Song</span></h1>
+            <h2>{t('home.hero.title')}</h2>
+            <p>{t('home.hero.description')}</p>
             
             <div className="hero-buttons">
-              <Link to="/projects" className="btn btn-primary">View My Work</Link>
-              <Link to="/contact" className="btn btn-secondary">Get In Touch</Link>
+              <Link to="/projects" className="btn btn-primary">{t('home.hero.viewWork')}</Link>
+              <Link to="/contact" className="btn btn-secondary">{t('home.hero.getInTouch')}</Link>
             </div>
           </div>
           
@@ -75,15 +77,15 @@ const Home = () => {
           <div className="scroll-mouse">
             <div className="scroll-wheel"></div>
           </div>
-          <p>Scroll Down</p>
+          <p>{t('home.hero.scrollDown')}</p>
         </div>
       </section>
       
       {/* Featured Projects Section */}
       <section className="featured-projects-section section">
         <div className="section-header">
-          <h2>Featured Projects</h2>
-          <p>Here are some of my recent projects that showcase my skills and experience.</p>
+          <h2>{t('home.projects.title')}</h2>
+          <p>{t('home.projects.subtitle')}</p>
         </div>
         
         <div className="featured-projects-grid">
@@ -111,7 +113,7 @@ const Home = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
-                    Code
+                    {t('home.projects.code')}
                   </a>
                   {project.demo && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
@@ -120,7 +122,7 @@ const Home = () => {
                         <polyline points="15 3 21 3 21 9"></polyline>
                         <line x1="10" y1="14" x2="21" y2="3"></line>
                       </svg>
-                      Demo
+                      {t('home.projects.demo')}
                     </a>
                   )}
                 </div>
@@ -130,15 +132,15 @@ const Home = () => {
         </div>
         
         <div className="view-all-projects">
-          <Link to="/projects" className="btn btn-secondary">View All Projects</Link>
+          <Link to="/projects" className="btn btn-secondary">{t('home.projects.viewAll')}</Link>
         </div>
       </section>
       
       {/* Skills Section */}
       <section className="skills-section section">
         <div className="section-header">
-          <h2>My Skills</h2>
-          <p>I've developed a diverse set of skills throughout my education and work experience.</p>
+          <h2>{t('home.skills.title')}</h2>
+          <p>{t('home.skills.subtitle')}</p>
         </div>
         
         <div className="skills-container">
@@ -155,7 +157,7 @@ const Home = () => {
         </div>
         
         <div className="view-resume">
-          <Link to="/resume" className="btn btn-secondary">View Full Resume</Link>
+          <Link to="/resume" className="btn btn-secondary">{t('home.skills.viewResume')}</Link>
         </div>
       </section>
       
@@ -163,9 +165,9 @@ const Home = () => {
       <section className="cta-section section">
         <div className="cta-container">
           <div className="cta-content">
-            <h2>Interested in working together?</h2>
-            <p>I'm currently looking for new opportunities and would love to hear about your project.</p>
-            <Link to="/contact" className="btn btn-primary">Get In Touch</Link>
+            <h2>{t('home.cta.title')}</h2>
+            <p>{t('home.cta.subtitle')}</p>
+            <Link to="/contact" className="btn btn-primary">{t('home.cta.button')}</Link>
           </div>
         </div>
       </section>
