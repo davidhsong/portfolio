@@ -12,7 +12,7 @@ const Projects = () => {
       title: 'Zaiku',
       description: 'A full-stack e-commerce platform for Asian-inspired fashion with user authentication, shopping cart, and secure checkout process.',
       longDescription: 'Zaiku is a comprehensive e-commerce solution built with modern web technologies. The platform features a responsive design that works seamlessly across devices, with a focus on user experience and performance. Key functionalities include user authentication with JWT and Google OAuth, product browsing with advanced filtering, shopping cart with persistent storage, and a secure checkout process with multiple payment options.',
-      image: '/images/zaiku.jpg',
+      image: '/images/zaiku.png',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Google OAuth', 'RESTful API', 'Context API'],
       categories: ['Full-Stack', 'E-Commerce', 'Web Development'],
       github: 'https://github.com/hanbit0218/zaiku.git',
@@ -25,7 +25,7 @@ const Projects = () => {
       title: 'Sales Forecast',
       description: 'Time-series analysis project using Python to predict monthly sales trends with a Linear Regression model.',
       longDescription: 'This data science project focused on analyzing historical sales data to build a predictive model for future sales forecasting. By leveraging time-series analysis techniques, I processed the data to achieve stationarity and then applied a Linear Regression model for prediction. The project involved extensive data cleaning, feature engineering, model training, and evaluation using common metrics like RMSE and MAE to ensure accuracy.',
-      image: '/images/sales-forecast.jpg',
+      image: '/images/salesforecast.png',
       technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn', 'TensorFlow'],
       categories: ['Data Science', 'Machine Learning', 'Data Analysis'],
       github: 'https://github.com/hanbit0218/sales_forecast.git',
@@ -38,7 +38,7 @@ const Projects = () => {
       title: 'Hydro Sense',
       description: 'IoT-based dashboard for soil moisture monitoring, visualizing sensor data and enabling environmental data analysis.',
       longDescription: 'Hydro Sense is an innovative IoT solution designed for the SJSU Community Garden to monitor soil moisture levels. As the frontend team lead, I directed the development of a dashboard that pulls data from soil sensors and presents it in an intuitive interface. The project integrates with Google Sheets API for data export and analysis, allowing gardeners to make informed decisions about irrigation and plant health based on environmental data.',
-      image: '/images/hydro-sense.jpg',
+      image: '/images/hydrosense.png',
       technologies: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'Firebase', 'Google API'],
       categories: ['Frontend', 'IoT', 'Web Development', 'Full-Stack'],
       github: 'https://github.com/hanbit0218/HydroSense.git',
@@ -64,7 +64,7 @@ const Projects = () => {
       title: 'Prompt Wave',
       description: 'A modern AI chatbot leveraging free Hugging Face models with a responsive React frontend and Express backend.',
       longDescription: 'PromptWave is a fully-functional AI chatbot that utilizes Hugging Face\'s free Inference API to provide intelligent conversation capabilities without any cost. The application features a sleek, responsive interface built with React and styled-components, allowing users to interact with powerful AI models like Google\'s Gemma, Zephyr, and Mistral. The Express.js backend efficiently handles API communication with Hugging Face\'s servers, while maintaining conversation context and providing a seamless user experience across devices. This project demonstrates implementing AI capabilities in web applications while optimizing for both performance and user experience.',
-      image: '',
+      image: '/images/promptwave.png',
       technologies: ['React', 'Express.js', 'Node.js', 'Hugging Face API', 'styled-components', 'React Router', 'Vercel'],
       categories: ['AI', 'Web Development', 'Full-Stack'],
       github: 'https://github.com/hanbit0218/promptwave.git',
@@ -129,9 +129,13 @@ const Projects = () => {
           <div key={project.id} className="project-card">
             <Link to={`/projects/${project.id}`} className="project-link">
               <div className="project-image">
-                <div className="project-placeholder">
-                  <span>{project.title.charAt(0)}</span>
-                </div>
+                {project.image ? (
+                  <img src={project.image} alt={project.title} />
+                ) : (
+                  <div className="project-placeholder">
+                    <span>{project.title.charAt(0)}</span>
+                  </div>
+                )}
                 {project.featured && <div className="project-featured">Featured</div>}
               </div>
               <div className="project-content">
