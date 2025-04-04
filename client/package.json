@@ -1,24 +1,20 @@
 {
-  "name": "client",
+  "name": "david-song-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.8.4",
-    "framer-motion": "^12.6.2",
-    "i18next": "^24.2.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-i18next": "^15.4.1",
-    "react-icons": "^5.5.0",
-    "react-intersection-observer": "^9.16.0",
-    "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.4.1",
-    "react-scripts": "^5.0.1",
-    "react-syntax-highlighter": "^15.6.1",
+    "framer-motion": "^10.16.4",
+    "i18next": "^23.7.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.2.2",
+    "react-markdown": "^8.0.7",
+    "react-router-dom": "^6.16.0",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,5 +40,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "4.9.5"
+  },
+  "resolutions": {
+    "typescript": "4.9.5"
+  },
+  "overrides": {
+    "typescript": "4.9.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
