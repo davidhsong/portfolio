@@ -16,7 +16,7 @@ const Home = () => {
       title: 'Zaiku',
       description: 'A full-stack e-commerce platform for Asian-inspired fashion with user authentication, shopping cart, and secure checkout.',
       image: '/images/zaiku.png',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+      technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Mongoose ODM', 'JWT Auth', 'Google OAuth', 'RESTful API', 'Context API'],
       github: 'https://github.com/hanbit0218/zaiku.git',
       demo: 'https://www.zaikuofficial.com/'
     },
@@ -33,8 +33,8 @@ const Home = () => {
       id: 'hydro-sense',
       title: 'Hydro Sense',
       description: 'IoT-based dashboard for soil moisture monitoring, visualizing sensor data and enabling environmental data analysis.',
-      image: '/images/hydro-sense.jpg',
-      technologies: ['Next.js', 'React', 'Tailwind CSS', 'Firebase'],
+      image: '/images/hydrosense.png',
+      technologies: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'Firebase', 'Google API'],
       github: 'https://github.com/hanbit0218/HydroSense.git',
       demo: null
     }

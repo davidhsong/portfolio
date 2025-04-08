@@ -53,7 +53,7 @@ const Projects = () => {
       longDescription: 'Developed during my time as a Software Engineer Fellow at Headstarter AI, this inventory tracking tool was built to demonstrate real-time data synchronization using Firebase. The application allows users to add, edit, and remove inventory items, with changes reflecting immediately across all connected clients. The frontend was built with React, employing reusable components and a clean, intuitive user interface.',
       image: '/images/inventory-tracker.jpg',
       technologies: ['JavaScript', 'React', 'Firebase', 'Git', 'GitHub'],
-      categories: ['Frontend', 'Backend', 'Fullstack', 'Web Development', 'Collaborative'],
+      categories: ['Frontend', 'Backend', 'Full-Stack', 'Web Development', 'Collaborative'],
       github: 'https://github.com/hanbit0218/inventory-tracker.git',
       demo: null,
       date: 'Jul 2024 - Aug 2024',
