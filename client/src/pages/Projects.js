@@ -87,15 +87,40 @@ const Projects = () => {
     }
   ], []);
 
+  // Helper function to convert date strings to comparable dates
+  const parseDateString = (dateString) => {
+    // Handle single month formats like "Jun 2024"
+    if (!dateString.includes('-')) {
+      const [month, year] = dateString.split(' ');
+      // Use the 15th of the month as a default day
+      return new Date(`${month} 15, ${year}`);
+    }
+    
+    // Handle date ranges like "Jan 2025 - Mar 2025"
+    const endDate = dateString.split(' - ')[1] || dateString;
+    const [month, year] = endDate.split(' ');
+    // Use the last day of the month as the end date
+    return new Date(`${month} 28, ${year}`);
+  };
+
+  // Sort projects by date (most recent first)
+  const sortedProjects = useMemo(() => {
+    return [...projects].sort((a, b) => {
+      const dateA = parseDateString(a.date);
+      const dateB = parseDateString(b.date);
+      return dateB - dateA; // Descending order (newest first)
+    });
+  }, [projects]);
+
   // Filter projects based on selected category
   const filteredProjects = useMemo(() => {
     if (filter === 'all') {
-      return projects;
+      return sortedProjects;
     }
-    return projects.filter(project => 
+    return sortedProjects.filter(project => 
       project.categories.includes(filter)
     );
-  }, [filter, projects]);
+  }, [filter, sortedProjects]);
 
   // Get unique categories from all projects
   const categories = useMemo(() => {
