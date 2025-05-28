@@ -1,4 +1,4 @@
-// src/routes.js
+// Updated routes.js (removing Blog and BlogPost routes)
 import React, { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Loader from './components/common/Loader';
@@ -10,12 +10,9 @@ const About = lazy(() => import('./pages/About'));
 const Projects = lazy(() => import('./pages/Projects'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
 const Resume = lazy(() => import('./pages/Resume'));
-const Blog = lazy(() => import('./pages/Blog'));
-const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Route config with SEO data
 const routes = [
   {
     path: '/',
@@ -44,7 +41,6 @@ const routes = [
   {
     path: '/projects/:id',
     element: <ProjectDetail />,
-    // SEO is handled dynamically within component
   },
   {
     path: '/resume',
@@ -55,24 +51,11 @@ const routes = [
     }
   },
   {
-    path: '/blog',
-    element: <Blog />,
-    seo: {
-      title: 'Blog | David Song',
-      description: 'Read my thoughts and insights on web development, programming, and technology in my blog.',
-    }
-  },
-  {
-    path: '/blog/:id',
-    element: <BlogPost />,
-    // SEO is handled dynamically within component
-  },
-  {
     path: '/contact',
     element: <Contact />,
     seo: {
       title: 'Contact | David Song',
-      description: 'Get in touch with me for collaboration, job opportunities, or just to connect. I\'m currently open to internships and freelance projects.',
+      description: "Get in touch with me for collaboration, job opportunities, or just to connect. I'm currently open to internships and freelance projects.",
     }
   },
   {
