@@ -6,11 +6,11 @@ const Resume = () => {
   const resumeData = {
     personalInfo: {
       name: "David Song",
-      email: "davidhsongg@gmail.com",
+      email: "david.song@sjsu.edu",
       phone: "(669) 236-1331",
-      linkedin: "linkedin.com/in/davidthesong",
-      github: "github.com/hanbit0218",
-      website: "https://dsong.bio"
+      linkedin: "https://www.linkedin.com/in/davidthesong/",
+      github: "https://github.com/davidhsong",
+      website: "https://portfolio-git-main-hanbit0218s-projects.vercel.app/"
     },
     education: [
       {
@@ -19,15 +19,19 @@ const Resume = () => {
         degree: "B.S., Computer Science",
         date: "Expected Dec 2025",
         courses: [
-          "Object-Oriented Programming",
-          "Operating Systems",
-          "Data Structures",
-          "Database Management Systems",
           "Artificial Intelligence",
-          "Machine Learning",
-          "Formal Languages",
-          "Information Security",
-          "Programming Paradigms"
+          "Machine Learning", 
+          "Data Science Senior Project", 
+          "Software Engineering", 
+          "Object-Oriented Design", 
+          "Operating Systems", 
+          "Data Structures & Algorithms", 
+          "Python Data Analysis", 
+          "Big Data Processing", 
+          "Database Systems", 
+          "Information Security", 
+          "Programming Paradigms", 
+          "Data Visualization"
         ]
       }
     ],
@@ -37,23 +41,19 @@ const Resume = () => {
         position: "Software Engineer Fellow",
         date: "Jul 2024 - Aug 2024",
         accomplishments: [
-          "Contributed to a team project creating a basic inventory tracking tool using Firebase for data storage and React for the frontend UI",
-          "Implemented a simple chatbot using pre-built AWS Bedrock templates and followed tutorials to host it on an AWS EC2 instance",
-          "Participated in daily stand-ups and weekly sprint planning meetings, learning Agile methodologies through hands-on practice"
-        ],
-        technologies: "JavaScript, React, Firebase, AWS (basic usage), Git, GitHub"
-      },
+          "Built and updated React.js components (form elements, loading states), contributing to 3 bug-free weekly releases",
+          "Attended workshops on AI tools and AWS/GCP and applied concepts to group projects to improve deployment reliability",
+          "Participated in Git-based code reviews, testing small Node.js/Express.js changes to ensure stable weekly releases"
+        ]      },
       {
         company: "Life Stages",
         position: "Software Engineer Intern",
         date: "May 2024 - Jul 2024",
         accomplishments: [
-          "Developed REST endpoints using Node.js and Express.js to capture user engagement metrics, contributing to the analytics dashboard",
-          "Participated in DevOps meetings and helped test deployment scripts, learning about CI/CD workflows in a production environment",
-          "Fixed 8 minor bugs in the API codebase and created documentation for backend services under senior developer supervision"
-        ],
-        technologies: "Node.js, Express.js, RESTful APIs, Git, Jenkins"
-      }
+          "Debugged and tested login/signup APIs (Node.js, PostgreSQL, JWT/OAuth), reducing user-reported authentication errors by 40%",
+          "Authored and organized REST API documentation, enabling smoother backend adoption by teammates",
+          "Collaborated with frontend developers to fix 12+ layout issues, improving responsiveness across React.js + mobile web"
+        ]      }
     ],
     projects: [
       {
@@ -62,47 +62,49 @@ const Resume = () => {
         website: "https://www.zaikuofficial.com/",
         date: "Jan 2025 - Mar 2025",
         accomplishments: [
-          "Built a full-stack e-commerce platform for Asian-inspired fashion using React, Node.js/Express, and MongoDB with JWT authentication",
-          "Implemented responsive UI components including shopping cart with persistent storage, advanced search functionality with real-time suggestions, and secure checkout process",
-          "Designed and consumed RESTful APIs for user management, product catalog, and order processing using Axios and context-based state management"
-        ],
-        technologies: "React, JavaScript, Node.js, Express, MongoDB, JWT Authentication, Google OAuth, RESTful API, Context API"
-      },
+          "Implemented secure login/session features with JWT and Google OAuth, ensuring strong authentication for users",
+          "Integrated Elastic Search for scalable, fast queries across multiple content types",
+          "Organized backend routes in Node.js/Express.js, adding tests to catch common issues during development"
+        ]      },
       {
-        name: "Sales Forecast",
-        url: "https://github.com/hanbit0218/sales_forecast.git",
-        date: "Feb 2024 - Mar 2024",
+        name: "PromptWave",
+        url: "https://github.com/davidhsong/promptwave",
+        date: "Aug 2024 – Oct 2024",
         accomplishments: [
-          "Implemented a time-series analysis project using Python to predict monthly sales trends with a Linear Regression model",
-          "Processed historical sales data with Pandas, applying differencing techniques to achieve stationarity and visualizing monthly patterns across multiple time periods",
-          "Evaluated model performance using RMSE and MAE metrics, achieving prediction accuracy within 15% of actual sales figures"
-        ],
-        technologies: "Python, Pandas, NumPy, Matplotlib, Scikit-learn, TensorFlow (imported but not fully implemented)"
-      },
+          "Built chatbot frontend in React.js, enabling switching between multiple Hugging Face API models",
+          "Reduced response latency using Redis caching and async functions, improving real-time performance",
+          "Debugged backend routes to ensure messages were processed correctly through Express.js APIs"
+        ]      },
       {
         name: "Hydro Sense",
         url: "https://github.com/hanbit0218/HydroSense.git",
         date: "Oct 2023 - Nov 2023",
         accomplishments: [
-          "Led a frontend team of 5 developers in creating an IoT-based dashboard for SJSU Community Garden's soil moisture monitoring system",
-          "Developed responsive React components to visualize sensor data, integrating Google Sheets API to allow gardeners to export and analyze environmental data",
-          "Created 3 informational pages with responsive design using Next.js and Tailwind CSS to enhance user experience across both mobile and desktop devices"
-        ],
-        technologies: "Next.js, React, JavaScript, Tailwind CSS, Firebase, Google API"
-      }
+          "Developed IoT dashboard with React.js + Node.js, displaying real-time sensor data for water monitoring",
+          "Integrated Google Sheets API for external data export and analysis",
+          "Improved dashboard layout for cross-device usability (desktop, tablet, mobile)"
+        ]      }
     ],
     skills: [
       {
         category: "Programming & Languages",
-        items: ["Python", "Java", "JavaScript", "C++", "SQL", "HTML/CSS"]
+        items: ["JavaScript (ES6+)", "Python", "Java", "SQL"]
       },
       {
-        category: "Frameworks & Libraries",
-        items: ["React", "Next.js", "Node.js", "Express.js", "Django", "Spring Boot", "Pandas", "NumPy", "Scikit-learn"]
+        category: "Backend & APIs",
+        items: ["RESTful APIs", "Microservices", "Authentication (JWT, OAuth)"]
       },
       {
-        category: "Infrastructure & Tools",
-        items: ["MongoDB", "MySQL", "Firebase", "AWS EC2", "AWS Bedrock", "Vercel", "Git", "GitHub", "CI/CD Pipelines", "Docker", "Linux", "UNIX", "Windows", "RESTful APIs", "JWT Authentication", "Agile Development", "Time Series Analysis"]
+        category: "Databases",
+        items: ["PostgreSQL", "MongoDB", "MySQL", "indexing/search with Elastic Search"]
+      },
+      {
+        category: "Cloud & Infrastructure",
+        items: ["GCP", "Firebase", "Kubernetes", "Git (CI/CD, version control)"]
+      },
+      {
+        category: "Networking & Systems",
+        items: ["Information Security fundamentals", "API scalability", "caching with Redis"]
       }
     ]
   };
