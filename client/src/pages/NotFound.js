@@ -1,16 +1,12 @@
-// src/pages/NotFound.js
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { LanguageContext } from '../context/LanguageContext';
 
 const NotFound = () => {
-  const { t } = useContext(LanguageContext);
-  
   return (
     <div className="not-found-page">
-      <h1>{t('notFound.title')}</h1>
-      <p>{t('notFound.message')}</p>
-      <Link to="/" className="btn btn-primary">{t('notFound.backHome')}</Link>
+      <h1>Page not found</h1>
+      <p>Sorry, the page you’re looking for doesn’t exist.</p>
+      <Link to="/" className="btn btn-primary">Back to Home</Link>
     </div>
   );
 };
