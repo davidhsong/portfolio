@@ -1,95 +1,93 @@
-// src/pages/Home.js
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeContext } from '../context/ThemeContext';
-import { LanguageContext } from '../context/LanguageContext';
 import '../styles/Home.css';
 
 const Home = () => {
-  const { } = useContext(ThemeContext);
-  const { t } = useContext(LanguageContext);
-
-  // Featured projects from resume
+  // Featured projects (resume as source of truth)
   const featuredProjects = [
     {
       id: 'zaiku',
       title: 'Zaiku',
-      description: 'A full-stack e-commerce platform for Asian-inspired fashion with user authentication, shopping cart, and secure checkout.',
+      description:
+        'Full-stack e-commerce platform with secure auth (JWT + Google OAuth), search, and organized Express routes.',
       image: '/images/zaiku.png',
-      technologies: ['React', 'JavaScript', 'Node.js', 'Express', 'MongoDB', 'Mongoose ODM', 'JWT Auth', 'Google OAuth', 'RESTful API', 'Context API'],
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Google OAuth', 'REST API'],
       github: 'https://github.com/hanbit0218/zaiku.git',
-      demo: 'https://www.zaikuofficial.com/'
+      demo: 'https://www.zaikuofficial.com/',
+      date: 'Jan 2025 – Apr 2025'
     },
     {
       id: 'promptwave',
       title: 'PromptWave',
-      description: 'A modern AI chatbot leveraging free Hugging Face models with a responsive React frontend and Express backend.',
+      description:
+        'AI chatbot UI in React with multiple Hugging Face models, lower latency via async + caching.',
       image: '/images/promptwave.png',
-      technologies: ['React', 'Express.js', 'Node.js', 'Hugging Face API', 'styled-components', 'Vercel'],
-      github: 'https://github.com/hanbit0218/promptwave',
-      demo: 'https://promptwave-frontend.vercel.app/'
-    }, 
+      technologies: ['React', 'Express.js', 'Hugging Face API', 'Redis'],
+      github: 'https://github.com/davidhsong/promptwave',
+      demo: null,
+      date: 'Aug 2024 – Oct 2024'
+    },
     {
       id: 'hydro-sense',
-      title: 'Hydro Sense',
-      description: 'IoT-based dashboard for soil moisture monitoring, visualizing sensor data and enabling environmental data analysis.',
+      title: 'HydroSense',
+      description:
+        'IoT dashboard showing real-time water monitoring; exports via Google Sheets API.',
       image: '/images/hydrosense.png',
-      technologies: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'Firebase', 'Google API'],
+      technologies: ['React', 'Node.js', 'Firebase', 'Google Sheets API'],
       github: 'https://github.com/hanbit0218/HydroSense.git',
-      demo: null
+      demo: null,
+      date: 'Oct 2023 – Nov 2023'
     }
   ];
 
-  // Skills from resume
+  // Skills aligned to resume
   const skills = [
-    { category: 'Programming & Languages', items: ['Python', 'Java', 'JavaScript', 'C++', 'SQL', 'HTML/CSS'] },
-    { category: 'Frameworks & Libraries', items: ['React', 'Next.js', 'Node.js', 'Express.js', 'Django', 'Spring Boot'] },
-    { category: 'Infrastructure & Tools', items: ['MongoDB', 'MySQL', 'Firebase', 'AWS', 'Git', 'Docker'] }
+    { category: 'Languages', items: ['JavaScript (ES6+)', 'Python', 'Java', 'SQL'] },
+    { category: 'Backend & APIs', items: ['RESTful APIs', 'Microservices', 'JWT/OAuth'] },
+    { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'MySQL', 'Elastic Search'] },
+    { category: 'Cloud & Infra', items: ['GCP', 'Firebase', 'Kubernetes', 'Git (CI/CD)'] },
+    { category: 'Systems', items: ['InfoSec fundamentals', 'API scalability', 'Redis caching'] }
   ];
 
   return (
     <div className="home-page">
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-text">
-            <h1>{t('home.hero.greeting')} <span className="highlight">David Song</span></h1>
-            <h2>{t('home.hero.title')}</h2>
-            <p>{t('home.hero.description')}</p>
-            
+            <h1>Hi, I’m <span className="highlight">David Song</span></h1>
+            <h2>Software Developer</h2>
+            <p>I build reliable web apps and APIs, with a focus on clean UX and performance.</p>
             <div className="hero-buttons">
-              <Link to="/projects" className="btn btn-primary">{t('home.hero.viewWork')}</Link>
-              <Link to="/contact" className="btn btn-secondary">{t('home.hero.getInTouch')}</Link>
+              <Link to="/projects" className="btn btn-primary">View my work</Link>
+              <Link to="/contact" className="btn btn-secondary">Get in touch</Link>
             </div>
           </div>
-          
+
           <div className="hero-image">
             <div className="hero-image-container">
-              {/* Replace with your actual image */}
               <div className="placeholder-image">
                 <span>DS</span>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="scroll-indicator">
-          <div className="scroll-mouse">
-            <div className="scroll-wheel"></div>
-          </div>
-          <p>{t('home.hero.scrollDown')}</p>
+          <div className="scroll-mouse"><div className="scroll-wheel"></div></div>
+          <p>Scroll down</p>
         </div>
       </section>
-      
-      {/* Featured Projects Section */}
+
+      {/* Featured Projects */}
       <section className="featured-projects-section section">
         <div className="section-header">
-          <h2>{t('home.projects.title')}</h2>
-          <p>{t('home.projects.subtitle')}</p>
+          <h2>Featured Projects</h2>
+          <p>Selected work from my resume.</p>
         </div>
-        
+
         <div className="featured-projects-grid">
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.map((project) => (
             <div key={project.id} className="project-card">
               <div className="project-image">
                 {project.image ? (
@@ -110,64 +108,59 @@ const Home = () => {
                 </div>
                 <div className="project-links">
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                    {t('home.projects.code')}
+                    Code
                   </a>
                   {project.demo && (
                     <a href={project.demo} target="_blank" rel="noopener noreferrer" className="project-link">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                      </svg>
-                      {t('home.projects.demo')}
+                      Live Demo
                     </a>
                   )}
+                </div>
+                <div className="project-meta">
+                  <span className="project-date">{project.date}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="view-all-projects">
-          <Link to="/projects" className="btn btn-secondary">{t('home.projects.viewAll')}</Link>
+          <Link to="/projects" className="btn btn-secondary">View all projects</Link>
         </div>
       </section>
-      
-      {/* Skills Section */}
+
+      {/* Skills */}
       <section className="skills-section section">
         <div className="section-header">
-          <h2>{t('home.skills.title')}</h2>
-          <p>{t('home.skills.subtitle')}</p>
+          <h2>Skills</h2>
+          <p>Technologies and tools I use.</p>
         </div>
-        
+
         <div className="skills-container">
-          {skills.map((skillGroup, index) => (
+          {skills.map((group, index) => (
             <div key={index} className="skill-group">
-              <h3>{skillGroup.category}</h3>
+              <h3>{group.category}</h3>
               <div className="skill-tags">
-                {skillGroup.items.map((skill, i) => (
+                {group.items.map((skill, i) => (
                   <span key={i} className="skill-tag">{skill}</span>
                 ))}
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="view-resume">
-          <Link to="/resume" className="btn btn-secondary">{t('home.skills.viewResume')}</Link>
+          <Link to="/resume" className="btn btn-secondary">View my resume</Link>
         </div>
       </section>
-      
-      {/* Call to Action Section */}
+
+      {/* CTA */}
       <section className="cta-section section">
         <div className="cta-container">
           <div className="cta-content">
-            <h2>{t('home.cta.title')}</h2>
-            <p>{t('home.cta.subtitle')}</p>
-            <Link to="/contact" className="btn btn-primary">{t('home.cta.button')}</Link>
+            <h2>Have a project in mind?</h2>
+            <p>Let’s talk about how I can help.</p>
+            <Link to="/contact" className="btn btn-primary">Contact me</Link>
           </div>
         </div>
       </section>
