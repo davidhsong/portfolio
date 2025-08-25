@@ -14,11 +14,6 @@ export const DATA = {
     { label: "GitHub", url: "https://github.com/davidhsong" }
   ],
 
-  // ✅ GitHub integration config
-  githubUsername: "davidhsong",      // <- your GitHub username
-  githubMaxRepos: 6,                 // how many updated repos to show
-  githubMaxEvents: 6,                // how many recent events to show
-
   // Education
   education: {
     school: "San José State University",
@@ -113,5 +108,40 @@ export const DATA = {
     "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Indexing/Search with Elastic Search"],
     "Cloud & Infrastructure": ["GCP", "Firebase", "Kubernetes", "Git (CI/CD, version control)"],
     "Networking & Systems": ["Information Security fundamentals", "API scalability", "Caching with Redis"]
-  }
+  },
+
+  // Interests — each has title, explanation, and an image list (carousel shows one at a time).
+  // Place your images in /public/interests/ with these filenames (or change paths).
+  interestsDetailed: [
+    {
+      title: "Gym",
+      explanation:
+        "Started working out approximately 1 year ago. Started working out to improve my confidence and figure. Always been insecure about my body and weight, but now I'm a bit more confident.",
+      images: ["/interests/gym-1.jpg", "/interests/gym-2.jpg", "/interests/gym-3.jpg"]
+    },
+    {
+      title: "Art",
+      explanation:
+        "Started drawing parts of face (eg. eyes, mouth, nose, hair) in high school. Shifted to hyperrealism and animations in college.",
+      images: ["/interests/art-1.jpg", "/interests/art-2.jpg", "/interests/art-3.jpg"]
+    },
+    {
+      title: "Photography",
+      explanation:
+        "Bought my first DSLR last year and have been capturing scenic viewpoints whenever I go out with my friends or family to the beach or nice viewpoints.",
+      images: ["/interests/photo-1.jpg", "/interests/photo-2.jpg", "/interests/photo-3.jpg"]
+    },
+    {
+      title: "Music",
+      explanation:
+        "I listen to a variety of music, whether it be EDM, R&B, rap, classical, etc. My current favorite music artist is either Lil Uzi or Drake.",
+      images: ["/interests/music-1.jpg", "/interests/music-2.jpg"]
+    },
+    {
+      title: "Festivals / Raves",
+      explanation:
+        "I grew up listening to EDM artists like Alan Walker and Zedd. Last year, I was able to go to my first EDM festival (Zedd in the Park) and I loved the thrill from nostalgic songs. I plan on going to many more with my friends and family.",
+      images: ["/interests/festival-1.jpg", "/interests/festival-2.jpg", "/interests/festival-3.jpg"]
+    }
+  ]
 };

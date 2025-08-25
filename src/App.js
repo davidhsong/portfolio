@@ -231,7 +231,7 @@ export default function App() {
             <button type="submit" className="btn primary" aria-label="Send email via your default email client">
               Send Message
             </button>
-            <p className="form-note">This opens your email with a prefilled message (mailto).</p>
+            <p className="form-note">This opens your email client with a prefilled message (mailto).</p>
           </form>
         </section>
       </main>
