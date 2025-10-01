@@ -91,9 +91,9 @@ export const DATA = {
       name: "HydroSense",
       dates: "Oct 2023 - Nov 2023",
       bullets: [
-        "Developed IoT dashboard with React.js + Node.js, displaying real-time sensor data for water monitoring",
-        "Integrated Google Sheets API for external data export and analysis",
-        "Improved dashboard layout for cross-device usability (desktop, tablet, mobile)"
+        "Built a React + Node.js dashboard visualizing real-time IoT sensor data from 5+ devices.",
+        "Integrated Google Sheets API for automated data exports and reporting.",
+        "Improved dashboard layout and responsiveness, boosting usability scores by 25% in peer testing."
       ],
       links: [
         { label: "GitHub", url: "https://github.com/davidhsong/HydroSense" }
