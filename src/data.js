@@ -1,14 +1,14 @@
 export const DATA = {
   // Header
   name: "DAVID SONG",
-  tagline: "B.S., Computer Science — Expected Graduation - Dec 2025",
+  tagline: "B.S., Computer Science, Minor in Digital Media Art — Expected Graduation - Dec 2025",
 
   // Contact: the form will send here
-  contactEmail: "david.song@sjsu.edu",
+  contactEmail: "davidhsongg@gmail.com",
 
   // Header meta info (email, phone, LinkedIn, GitHub)
   headerMeta: [
-    { label: "david.song@sjsu.edu", url: "mailto:david.song@sjsu.edu" },
+    { label: "davidhsongg@gmail.com", url: "mailto:davidhsongg@gmail.com" },
     { label: "(669) 236-1331", url: "tel:+16692361331" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidthesong/" },
     { label: "GitHub", url: "https://github.com/davidhsong" }
@@ -44,9 +44,9 @@ export const DATA = {
       company: "Headstarter AI",
       dates: "Jul 2024 - Aug 2024",
       bullets: [
-        "Built and updated React.js components (form elements, loading states), contributing to 3 bug-free weekly releases",
-        "Attended workshops on AI tools and AWS/GCP and applied concepts to group projects to improve deployment reliability",
-        "Participated in Git-based code reviews, testing small Node.js/Express.js changes to ensure stable weekly releases"
+        "Developed React.js components integrated with Node.js/Express APIs, contributing to multiple feature releases.",
+        "Applied AWS/GCP cloud deployment practices and CI/CD pipelines, improving system reliability and reducing release errors.",
+        "Collaborated in a cross-functional Agile team, performing code reviews and debugging services to ensure stability."
       ]
     },
     {
@@ -54,9 +54,9 @@ export const DATA = {
       company: "Life Stages",
       dates: "May 2024 - Jul 2024",
       bullets: [
-        "Debugged and tested login/signup APIs (Node.js, PostgreSQL, JWT/OAuth), reducing user-reported authentication errors by 40%",
-        "Authored and organized REST API documentation, enabling smoother backend adoption by teammates",
-        "Collaborated with frontend developers to fix 12+ layout issues, improving responsiveness across React.js + mobile web"
+        "Debugged authentication APIs (Node.js, PostgreSQL, JWT/OAuth), reducing login errors by ~40%.",
+        "Authored REST API documentation, accelerating backend adoption and reducing onboarding time for new developers.",
+        "Partnered with frontend engineers and product teammates to fix 12+ UI issues, improving responsiveness and cross-device usability."
       ]
     }
   ],
@@ -67,9 +67,9 @@ export const DATA = {
       name: "Zaiku",
       dates: "Jan 2025 – Apr 2025",
       bullets: [
-        "Implemented secure login/session features with JWT and Google OAuth, ensuring strong authentication for users",
-        "Integrated Elastic Search for scalable, fast queries across multiple content types",
-        "Organized backend routes in Node.js/Express.js, adding tests to catch common issues during development"
+        "Implemented JWT + Google OAuth authentication for secure sessions across the platform.",
+        "Integrated ElasticSearch for scalable data queries, reducing search latency by ~30%.",
+        "Added backend tests to improve reliability and reinforce data structure integrity."
       ],
       links: [
         { label: "GitHub", url: "https://github.com/davidhsong/zaiku" }
@@ -79,9 +79,9 @@ export const DATA = {
       name: "PromptWave",
       dates: "Aug 2024 – Oct 2024",
       bullets: [
-        "Built chatbot frontend in React.js, enabling switching between multiple Hugging Face API models",
-        "Reduced response latency using Redis caching and async functions, improving real-time performance",
-        "Debugged backend routes to ensure messages were processed correctly through Express.js APIs"
+        "Built a React.js chatbot interface connected to Hugging Face APIs for real-time interactions.",
+        "Optimized backend response times by ~40% using Redis caching and async workflows.",
+        "Debugged Express.js APIs to ensure stable and reliable client-server communication."
       ],
       links: [
         { label: "GitHub", url: "https://github.com/davidhsong/promptwave" }
@@ -101,17 +101,16 @@ export const DATA = {
     }
   ],
 
-  // Skills (Languages include HTML and CSS)
   skills: {
-    "Languages": ["JavaScript (ES6+)", "HTML", "CSS", "Python", "Java", "SQL"],
-    "Backend & APIs": ["RESTful APIs", "Microservices", "Authentication (JWT, OAuth)"],
-    "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Indexing/Search with Elastic Search"],
-    "Cloud & Infrastructure": ["GCP", "Firebase", "Kubernetes", "Git (CI/CD, version control)"],
-    "Networking & Systems": ["Information Security fundamentals", "API scalability", "Caching with Redis"]
+    "Languages": ["Python", "Java", "JavaScript (ES6+)", "SQL", "HTML/CSS"],
+    "Backend & APIs": ["Node.js/Express", "REST APIs", "JWT/OAuth"],
+    "Frontend": ["React.js", "responsive UI design"], 
+    "Databases": ["PostgreSQL", "MongoDB", "MySQL"],
+    "Cloud & Infra": ["AWS", "GCP", "Firebase", "Git/CI/CD pipelines"],
+    "Core CS": ["Object-Oriented Programming", "Data Structures and Algorithms", "Debugging", "Scalable Systems"],
+    "Collaboration": ["Agile scrum", "code reviews", "cross-functional teamwork"]
   },
 
-  // Interests — each has title, explanation, and an image list (carousel shows one at a time).
-  // Place your images in /public/interests/ with these filenames (or change paths).
   interestsDetailed: [
     {
       title: "Gym",
