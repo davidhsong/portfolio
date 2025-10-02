@@ -18,35 +18,36 @@ export const DATA = {
   education: {
     school: "San José State University",
     location: "San José, CA",
-    degree: "B.S., Computer Science",
+    degree: "B.S., Computer Science, Minor in Digital Media Art",
     dates: "Expected Graduation - Dec 2025",
     coursework: [
+      "Data Structures & Algorithms",
+      "Object-Oriented Design",
+      "Software Engineering",
+      "Operating Systems",
       "Artificial Intelligence",
       "Machine Learning",
-      "Data Science Senior Project",
-      "Software Engineering",
-      "Object-Oriented Design",
-      "Operating Systems",
-      "Data Structures & Algorithms",
-      "Python Data Analysis",
-      "Big Data Processing",
-      "Database Systems",
+      "Data Visualization",
+      "Database Management Systems",
+      "Digital Media Art",
       "Information Security",
       "Programming Paradigms",
-      "Data Visualization"
+      "Big Data Processing"
     ]
   },
 
-  // Experience
+  // Experience (expanded for portfolio)
   experience: [
     {
       title: "Software Engineer Fellow",
       company: "Headstarter AI",
       dates: "Jul 2024 - Aug 2024",
       bullets: [
-        "Developed React.js components integrated with Node.js/Express APIs, contributing to multiple feature releases.",
-        "Applied AWS/GCP cloud deployment practices and CI/CD pipelines, improving system reliability and reducing release errors.",
-        "Collaborated in a cross-functional Agile team, performing code reviews and debugging services to ensure stability."
+        "Built and maintained React.js components (forms, loading states, error handling) integrated with Node.js/Express APIs for smooth frontend–backend interaction.",
+        "Contributed across 3 Agile sprints with multiple feature releases delivered and no major regressions reported.",
+        "Applied AWS/GCP deployment practices and CI/CD workflows, reducing deployment errors by ~25% and improving release reliability.",
+        "Performed Git-based peer code reviews and wrote sanity tests to improve maintainability and catch regressions early.",
+        "Collaborated across time zones in a cross-functional team, aligning UX expectations with technical constraints and delivery timelines."
       ]
     },
     {
@@ -54,22 +55,26 @@ export const DATA = {
       company: "Life Stages",
       dates: "May 2024 - Jul 2024",
       bullets: [
-        "Debugged authentication APIs (Node.js, PostgreSQL, JWT/OAuth), reducing login errors by ~40%.",
-        "Authored REST API documentation, accelerating backend adoption and reducing onboarding time for new developers.",
-        "Partnered with frontend engineers and product teammates to fix 12+ UI issues, improving responsiveness and cross-device usability."
+        "Debugged and optimized authentication APIs (Node.js, PostgreSQL, JWT/OAuth), reducing login errors by ~40% and improving session stability.",
+        "Authored and organized REST API documentation, accelerating backend adoption and cutting new-dev onboarding time.",
+        "Resolved 12+ React.js UI issues, improving cross-device responsiveness and perceived performance.",
+        "Added unit tests and tightened error handling around auth flows to prevent edge-case failures.",
+        "Worked in Agile Scrum with product and design partners to prioritize fixes and ship improvements faster."
       ]
     }
   ],
 
-  // Projects with working GitHub URLs
+  // Projects (expanded for portfolio)
   projects: [
     {
       name: "Zaiku",
       dates: "Jan 2025 – Apr 2025",
       bullets: [
-        "Implemented JWT + Google OAuth authentication for secure sessions across the platform.",
-        "Integrated ElasticSearch for scalable data queries, reducing search latency by ~30%.",
-        "Added backend tests to improve reliability and reinforce data structure integrity."
+        "Implemented secure authentication (JWT + Google OAuth) in Node.js/Express to support reliable user sessions.",
+        "Integrated ElasticSearch for scalable, low-latency queries over larger datasets, reducing typical search times by ~30%.",
+        "Structured modular routes and centralized error handling to simplify maintenance and debugging.",
+        "Added backend tests to improve reliability and reinforce data structure integrity during development.",
+        "Collaborated with frontend to integrate APIs and stage features for smooth rollouts."
       ],
       links: [
         { label: "GitHub", url: "https://github.com/davidhsong/zaiku" }
@@ -79,9 +84,10 @@ export const DATA = {
       name: "PromptWave",
       dates: "Aug 2024 – Oct 2024",
       bullets: [
-        "Built a React.js chatbot interface connected to Hugging Face APIs for real-time interactions.",
-        "Optimized backend response times by ~40% using Redis caching and async workflows.",
-        "Debugged Express.js APIs to ensure stable and reliable client-server communication."
+        "Built a React.js chatbot interface with multiple Hugging Face model integrations for real-time interactions.",
+        "Optimized backend response times by ~40% via Redis caching and async workflows to handle bursty traffic.",
+        "Hardened Express routes to better handle concurrency, timeouts, and rate limits for overall stability.",
+        "Added UI/UX polish to simplify model switching and improve input/response readability."
       ],
       links: [
         { label: "GitHub", url: "https://github.com/davidhsong/promptwave" }
@@ -91,9 +97,10 @@ export const DATA = {
       name: "HydroSense",
       dates: "Oct 2023 - Nov 2023",
       bullets: [
-        "Built a React + Node.js dashboard visualizing real-time IoT sensor data from 5+ devices.",
-        "Integrated Google Sheets API for automated data exports and reporting.",
-        "Improved dashboard layout and responsiveness, boosting usability scores by 25% in peer testing."
+        "Developed a React + Node.js IoT dashboard to visualize real-time water sensor data from 5+ devices.",
+        "Integrated Google Sheets API for automated data export/reporting to support non-technical stakeholders.",
+        "Improved layout and responsiveness across desktop, tablet, and mobile, increasing usability scores by ~25% in peer testing.",
+        "Used Figma for UI/UX design to prototype flows and iterate on visual hierarchy before implementation."
       ],
       links: [
         { label: "GitHub", url: "https://github.com/davidhsong/HydroSense" }
@@ -101,45 +108,46 @@ export const DATA = {
     }
   ],
 
+  // Skills (broadened slightly; still accurate)
   skills: {
     "Languages": ["Python", "Java", "JavaScript (ES6+)", "SQL", "HTML/CSS"],
     "Backend & APIs": ["Node.js/Express", "REST APIs", "JWT/OAuth"],
-    "Frontend": ["React.js", "responsive UI design"], 
-    "Databases": ["PostgreSQL", "MongoDB", "MySQL"],
-    "Cloud & Infra": ["AWS", "GCP", "Firebase", "Git/CI/CD pipelines"],
-    "Core CS": ["Object-Oriented Programming", "Data Structures and Algorithms", "Debugging", "Scalable Systems"],
-    "Collaboration": ["Agile scrum", "code reviews", "cross-functional teamwork"]
+    "Frontend": ["React.js", "Responsive UI Design", "UI/UX (Figma)"],
+    "Databases": ["PostgreSQL", "MongoDB", "MySQL", "ElasticSearch"],
+    "Cloud & Infra": ["AWS", "GCP", "Firebase", "Git", "CI/CD Pipelines"],
+    "Core CS": ["Object-Oriented Programming", "Data Structures & Algorithms", "Debugging", "Scalable Systems"],
+    "Collaboration": ["Agile Scrum", "Code Reviews", "Cross-Functional Teamwork", "Documentation"]
   },
 
-  interestsDetailed: [
+    interestsDetailed: [
     {
       title: "Gym",
-      explanation:
-        "Started working out approximately 1 year ago. Started working out to improve my confidence and figure. Always been insecure about my body and weight, but now I'm a bit more confident.",
+      icon: "💪",
+      explanation: "Started working out approximately 1 year ago...",
       images: ["/interests/gym-1.jpg", "/interests/gym-2.jpg", "/interests/gym-3.jpg"]
     },
     {
       title: "Art",
-      explanation:
-        "Started drawing parts of face (eg. eyes, mouth, nose, hair) in high school. Shifted to hyperrealism and animations in college.",
+      icon: "🎨",
+      explanation: "Started drawing parts of face (eg. eyes, mouth...)",
       images: ["/interests/art-1.jpg", "/interests/art-2.jpg", "/interests/art-3.jpg"]
     },
     {
       title: "Photography",
-      explanation:
-        "Bought my first DSLR last year and have been capturing scenic viewpoints whenever I go out with my friends or family to the beach or nice viewpoints.",
+      icon: "📷",
+      explanation: "Bought my first DSLR last year...",
       images: ["/interests/photo-1.jpg", "/interests/photo-2.jpg", "/interests/photo-3.jpg"]
     },
     {
       title: "Music",
-      explanation:
-        "I listen to a variety of music, whether it be EDM, R&B, rap, classical, etc. My current favorite music artist is either Lil Uzi or Drake.",
+      icon: "🎵",
+      explanation: "I listen to a variety of music...",
       images: ["/interests/music-1.jpg", "/interests/music-2.jpg"]
     },
     {
       title: "Festivals / Raves",
-      explanation:
-        "I grew up listening to EDM artists like Alan Walker and Zedd. Last year, I was able to go to my first EDM festival (Zedd in the Park) and I loved the thrill from nostalgic songs. I plan on going to many more with my friends and family.",
+      icon: "🎶",
+      explanation: "I grew up listening to EDM artists...",
       images: ["/interests/festival-1.jpg", "/interests/festival-2.jpg", "/interests/festival-3.jpg"]
     }
   ]

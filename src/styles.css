@@ -213,3 +213,20 @@ a:hover, a:focus-visible { color: var(--accent-2); outline: none; }
 
 /* Ensure sections don't hide under sticky header */
 #projects, #experience, #skills, #github, #contact, #education { scroll-margin-top: 96px; }
+
+.hobby-card {
+  text-align: center;
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hobby-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}

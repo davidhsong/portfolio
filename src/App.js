@@ -45,7 +45,7 @@ export default function App() {
               <li><a href="#experience">Experience</a></li>
               <li><a href="#education">Education</a></li>
               <li><a href="#skills">Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#contact">Hobbies</a></li>
             </ul>
           </nav>
         </div>
@@ -92,7 +92,7 @@ export default function App() {
                   >
                     Download Résumé
                   </a>
-                  <a className="btn ghost" href="#contact">
+                  <a className="btn ghost" href="#hobbies">
                     Contact Me
                   </a>
                 </div>
@@ -176,64 +176,33 @@ export default function App() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="section container" aria-labelledby="contact-title">
-          <h2 id="contact-title" className="section-title">Contact</h2>
-          <form className="contact-form" onSubmit={submitMailto} noValidate>
-            <div className="field">
-              <label htmlFor="name">Name</label>
-              <input
-                id="name"
-                name="name"
-                autoComplete="name"
-                value={form.name}
-                onChange={onChange}
-                required
-                aria-invalid={!!errors.name}
-                aria-describedby="name-error"
-                placeholder="Your name"
-              />
-              {errors.name && <p id="name-error" className="error">{errors.name}</p>}
-            </div>
-
-            <div className="field">
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                value={form.email}
-                onChange={onChange}
-                required
-                aria-invalid={!!errors.email}
-                aria-describedby="email-error"
-                placeholder="you@example.com"
-              />
-              {errors.email && <p id="email-error" className="error">{errors.email}</p>}
-            </div>
-
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                value={form.message}
-                onChange={onChange}
-                required
-                aria-invalid={!!errors.message}
-                aria-describedby="message-error"
-                placeholder="What would you like to build?"
-              />
-              {errors.message && <p id="message-error" className="error">{errors.message}</p>}
-            </div>
-
-            <button type="submit" className="btn primary" aria-label="Send email via your default email client">
-              Send Message
-            </button>
-            <p className="form-note">This opens your email client with a prefilled message (mailto).</p>
-          </form>
+        {/* Hobbies */}
+        <section id="hobbies" className="section container" aria-labelledby="hobbies-title">
+          <h2 id="hobbies-title" className="section-title">Hobbies</h2>
+          <div className="grid">
+            {DATA.interestsDetailed.map((hobby, i) => (
+              <div className="card hobby-card" key={i}>
+                {/* Icon */}
+                <div className="hobby-icon">
+                  {hobby.icon && <span className="icon">{hobby.icon}</span>}
+                </div>
+                <h3>{hobby.title}</h3>
+                <p>{hobby.explanation}</p>
+                <div className="chips">
+                  {hobby.images.map((img, j) => (
+                    <img
+                      key={j}
+                      src={img}
+                      alt={`${hobby.title} example ${j + 1}`}
+                      className="hobby-img"
+                    />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
+
       </main>
 
       {/* Footer */}
