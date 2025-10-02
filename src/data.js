@@ -1,25 +1,18 @@
 export const DATA = {
-  // Header
   name: "DAVID SONG",
-  tagline: "B.S., Computer Science, Minor in Digital Media Art — Expected Graduation - Dec 2025",
-
-  // Contact: the form will send here
+  tagline: "CS @ SJSU • graduating Dec 2025 • I build clean, useful software",
   contactEmail: "davidhsongg@gmail.com",
-
-  // Header meta info (email, phone, LinkedIn, GitHub)
   headerMeta: [
-    { label: "davidhsongg@gmail.com", url: "mailto:davidhsongg@gmail.com" },
-    { label: "(669) 236-1331", url: "tel:+16692361331" },
+    { label: "Email", url: "mailto:davidhsongg@gmail.com" },
+    { label: "Phone", url: "tel:+16692361331" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/davidthesong/" },
     { label: "GitHub", url: "https://github.com/davidhsong" }
   ],
-
-  // Education
   education: {
-    school: "San José State University",
-    location: "San José, CA",
-    degree: "B.S., Computer Science, Minor in Digital Media Art",
-    dates: "Expected Graduation - Dec 2025",
+    school: "San Jose State University",
+    location: "San Jose, CA",
+    degree: "B.S. Computer Science, Minor in Digital Media Art",
+    dates: "Expected Dec 2025",
     coursework: [
       "Data Structures & Algorithms",
       "Object-Oriented Design",
@@ -29,126 +22,99 @@ export const DATA = {
       "Machine Learning",
       "Data Visualization",
       "Database Management Systems",
-      "Digital Media Art",
       "Information Security",
       "Programming Paradigms",
       "Big Data Processing"
     ]
   },
-
-  // Experience (expanded for portfolio)
   experience: [
     {
       title: "Software Engineer Fellow",
       company: "Headstarter AI",
-      dates: "Jul 2024 - Aug 2024",
+      dates: "Jul 2024 – Aug 2024",
       bullets: [
-        "Built and maintained React.js components (forms, loading states, error handling) integrated with Node.js/Express APIs for smooth frontend–backend interaction.",
-        "Contributed across 3 Agile sprints with multiple feature releases delivered and no major regressions reported.",
-        "Applied AWS/GCP deployment practices and CI/CD workflows, reducing deployment errors by ~25% and improving release reliability.",
-        "Performed Git-based peer code reviews and wrote sanity tests to improve maintainability and catch regressions early.",
-        "Collaborated across time zones in a cross-functional team, aligning UX expectations with technical constraints and delivery timelines."
+        "Shipped React features people actually used; kept interactions fast, stable, and accessible. Partnered with design to tune micro-states and ensure no jank.",
+        "Integrated components with Node/Express APIs, hardened error states, and added retries so the UI felt reliable even on flaky networks.",
+        "Planned small weekly releases; wrote sanity checks and reviewed PRs to avoid regressions and keep velocity predictable.",
+        "Set up lightweight CI and basic cloud deploys so releases were boring (in the best way) and rollbacks were easy."
       ]
     },
     {
       title: "Software Engineer Intern",
       company: "Life Stages",
-      dates: "May 2024 - Jul 2024",
+      dates: "May 2024 – Jul 2024",
       bullets: [
-        "Debugged and optimized authentication APIs (Node.js, PostgreSQL, JWT/OAuth), reducing login errors by ~40% and improving session stability.",
-        "Authored and organized REST API documentation, accelerating backend adoption and cutting new-dev onboarding time.",
-        "Resolved 12+ React.js UI issues, improving cross-device responsiveness and perceived performance.",
-        "Added unit tests and tightened error handling around auth flows to prevent edge-case failures.",
-        "Worked in Agile Scrum with product and design partners to prioritize fixes and ship improvements faster."
+        "Untangled a noisy auth flow (sessions & API edge cases) and reduced login issues by clarifying states and tightening server responses.",
+        "Refined React layouts for responsiveness and clarity—fixed confusing interactions and improved mobile breakpoints.",
+        "Wrote concise API docs and setup notes so new teammates could get productive quickly without hand-holding."
       ]
     }
   ],
-
-  // Projects (expanded for portfolio)
   projects: [
+    {
+      name: "PPSN — Community Safety Navigator",
+      dates: "Hackathon Project",
+      bullets: [
+        "Built a safer-route web app on React + Mapbox; I owned the map layers, directions, and Firebase storage.",
+        "Implemented route saving, turn-by-turn text, and an animated route marker for clear navigation.",
+        "Added clickable crime markers with details; watched non-technical friends try it and iterated on what actually mattered for them."
+      ],
+      links: [{ label: "GitHub", url: "https://github.com/SJHacks-Team44/ppsn" }]
+    },
+    {
+      name: "ART109 Audio Visualizer",
+      dates: "Course Project",
+      bullets: [
+        "Browser visualizer using Web Audio API and p5.js; supports mic or file input for live playback.",
+        "Built three views (circles, bars, waveform) and tuned sensitivity, resizing, and frame pacing to stay smooth instead of chaotic."
+      ],
+      links: [{ label: "GitHub", url: "https://github.com/davidhsong/art109-audio-visualizer" }]
+    },
     {
       name: "Zaiku",
       dates: "Jan 2025 – Apr 2025",
       bullets: [
-        "Implemented secure authentication (JWT + Google OAuth) in Node.js/Express to support reliable user sessions.",
-        "Integrated ElasticSearch for scalable, low-latency queries over larger datasets, reducing typical search times by ~30%.",
-        "Structured modular routes and centralized error handling to simplify maintenance and debugging.",
-        "Added backend tests to improve reliability and reinforce data structure integrity during development.",
-        "Collaborated with frontend to integrate APIs and stage features for smooth rollouts."
+        "Auth that feels invisible: JWT + Google OAuth on Node/Express with clear error surfaces and safe defaults.",
+        "Search stays snappy with Elasticsearch for larger datasets; added indexes and query tuning for common paths.",
+        "Tests + centralized error handling so debugging later doesn’t turn into archaeology."
       ],
-      links: [
-        { label: "GitHub", url: "https://github.com/davidhsong/zaiku" }
-      ]
+      links: [{ label: "GitHub", url: "https://github.com/davidhsong/zaiku" }]
     },
     {
       name: "PromptWave",
       dates: "Aug 2024 – Oct 2024",
       bullets: [
-        "Built a React.js chatbot interface with multiple Hugging Face model integrations for real-time interactions.",
-        "Optimized backend response times by ~40% via Redis caching and async workflows to handle bursty traffic.",
-        "Hardened Express routes to better handle concurrency, timeouts, and rate limits for overall stability.",
-        "Added UI/UX polish to simplify model switching and improve input/response readability."
+        "Lightweight chat UI to swap between ML models without the confusing bits; clean prompts, clean outputs.",
+        "Trimmed response times via caching and async jobs; added timeouts and rate-limit guards to avoid stalls."
       ],
-      links: [
-        { label: "GitHub", url: "https://github.com/davidhsong/promptwave" }
-      ]
+      links: [{ label: "GitHub", url: "https://github.com/davidhsong/promptwave" }]
     },
     {
       name: "HydroSense",
-      dates: "Oct 2023 - Nov 2023",
+      dates: "Oct 2023 – Nov 2023",
       bullets: [
-        "Developed a React + Node.js IoT dashboard to visualize real-time water sensor data from 5+ devices.",
-        "Integrated Google Sheets API for automated data export/reporting to support non-technical stakeholders.",
-        "Improved layout and responsiveness across desktop, tablet, and mobile, increasing usability scores by ~25% in peer testing.",
-        "Used Figma for UI/UX design to prototype flows and iterate on visual hierarchy before implementation."
+        "Small IoT dashboard for water sensor data with simple sharing/exports for non-technical users.",
+        "Designed mobile-first layout to make the rest of the build smoother and keep charts usable on phones."
       ],
-      links: [
-        { label: "GitHub", url: "https://github.com/davidhsong/HydroSense" }
-      ]
+      links: [{ label: "GitHub", url: "https://github.com/davidhsong/HydroSense" }]
     }
   ],
-
-  // Skills (broadened slightly; still accurate)
   skills: {
-    "Languages": ["Python", "Java", "JavaScript (ES6+)", "SQL", "HTML/CSS"],
+    Languages: ["Python", "Java", "JavaScript (ES6+)", "SQL", "HTML/CSS"],
     "Backend & APIs": ["Node.js/Express", "REST APIs", "JWT/OAuth"],
-    "Frontend": ["React.js", "Responsive UI Design", "UI/UX (Figma)"],
-    "Databases": ["PostgreSQL", "MongoDB", "MySQL", "ElasticSearch"],
+    Frontend: ["React.js", "Responsive UI", "UI/UX (Figma)"],
+    Databases: ["PostgreSQL", "MongoDB", "MySQL", "ElasticSearch"],
     "Cloud & Infra": ["AWS", "GCP", "Firebase", "Git", "CI/CD Pipelines"],
     "Core CS": ["Object-Oriented Programming", "Data Structures & Algorithms", "Debugging", "Scalable Systems"],
-    "Collaboration": ["Agile Scrum", "Code Reviews", "Cross-Functional Teamwork", "Documentation"]
+    Collaboration: ["Agile Scrum", "Code Reviews", "Cross-Functional Teamwork", "Documentation"]
   },
-
-    interestsDetailed: [
-    {
-      title: "Gym",
-      icon: "💪",
-      explanation: "Started working out approximately 1 year ago...",
-      images: ["/interests/gym-1.jpg", "/interests/gym-2.jpg", "/interests/gym-3.jpg"]
-    },
-    {
-      title: "Art",
-      icon: "🎨",
-      explanation: "Started drawing parts of face (eg. eyes, mouth...)",
-      images: ["/interests/art-1.jpg", "/interests/art-2.jpg", "/interests/art-3.jpg"]
-    },
-    {
-      title: "Photography",
-      icon: "📷",
-      explanation: "Bought my first DSLR last year...",
-      images: ["/interests/photo-1.jpg", "/interests/photo-2.jpg", "/interests/photo-3.jpg"]
-    },
-    {
-      title: "Music",
-      icon: "🎵",
-      explanation: "I listen to a variety of music...",
-      images: ["/interests/music-1.jpg", "/interests/music-2.jpg"]
-    },
-    {
-      title: "Festivals / Raves",
-      icon: "🎶",
-      explanation: "I grew up listening to EDM artists...",
-      images: ["/interests/festival-1.jpg", "/interests/festival-2.jpg", "/interests/festival-3.jpg"]
-    }
+  interestsDetailed: [
+    { title: "Gym", icon: "💪", explanation: "Lifting helps me reset and think clearly.", images: ["/interests/gym-1.jpg", "/interests/gym-2.jpg", "/interests/gym-3.jpg"] },
+    { title: "Art", icon: "🎨", explanation: "Sketching faces taught me patience and details.", images: ["/interests/art-1.jpg", "/interests/art-2.jpg", "/interests/art-3.jpg"] },
+    { title: "Photography", icon: "📷", explanation: "Playing with light and framing keeps my eye honest.", images: ["/interests/photo-1.jpg", "/interests/photo-2.jpg", "/interests/photo-3.jpg"] },
+    { title: "Music", icon: "🎵", explanation: "Playlists for building and debugging.", images: ["/interests/music-1.jpg", "/interests/music-2.jpg"] },
+    { title: "Festivals / Raves", icon: "🎶", explanation: "EDM shows are my happy place.", images: ["/interests/festival-1.jpg", "/interests/festival-2.jpg", "/interests/festival-3.jpg"] }
   ]
 };
+
+export default DATA;
